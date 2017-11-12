@@ -1,0 +1,8 @@
+<header id="header" xmlns:th="http://www.thymeleaf.org">
+    <h1 id="page_title" th:text="${title}" />
+    <nav>
+        <a class="nav" th:classappend="${current == 1} ? current" href="/stories" title="Stories">Stories</a>
+        <a class="nav" th:classappend="${current == 2} ? current" href="/trends" title="Trends">Trends</a>
+        <a class="nav" th:classappend="${current == 3} ? current" href="/feed" title="Feed">Feed</a>
+    </nav>
+</header>

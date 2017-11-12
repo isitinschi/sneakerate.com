@@ -1,0 +1,43 @@
+#feed_block {
+    width: 80%;
+    margin: auto;
+}
+
+.feed_figure {
+    display: inline-block;
+    width: 100%;
+    margin: 1%;
+}
+
+.feed_image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.feed_name {
+    font-size: 1.6vw;
+}
+
+.description_block {
+    margin: auto;
+    text-align: left;
+    width: 75%;
+}
+
+.old_price {
+    text-decoration: line-through!important;
+}
+
+.red {
+    color: #b12704!important;
+}
+
+header {
+    height: 25vh;
+}
+
+@media screen and (max-device-width : 1024px) {
+    .feed_name {
+        font-size: 2.5vw;
+    }
+}

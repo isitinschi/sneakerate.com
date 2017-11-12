@@ -1,0 +1,36 @@
+.shoe_figure {
+    width: 100%;
+}
+
+.main_image_view_block {
+    width: 30%;
+    display: inline-block;
+    margin: 1%;
+    vertical-align:top;
+}
+
+.description_block {
+    width: 30%;
+    display: inline-block;
+    margin: 1%;
+    vertical-align:top;
+}
+
+.buy_on_amazon_block {
+    width: 30%;
+    display: inline-block;
+    margin: 1%;
+    vertical-align:top;
+}
+
+.old_price {
+    text-decoration: line-through!important;
+}
+
+.red {
+    color: #b12704!important;
+}
+
+header {
+    height: 25vh;
+}

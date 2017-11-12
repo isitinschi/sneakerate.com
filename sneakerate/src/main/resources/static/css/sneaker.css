@@ -1,0 +1,114 @@
+.shoe_figure {
+    width: 50vw !important;
+    height: 50vw !important;
+}
+
+#image_section {
+    width:100%;
+    height:100%;
+}
+
+.image_view {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid rgb(200, 200, 200);
+    cursor: pointer;
+    display: block;
+    max-width: 100%;
+    float: right;
+    clear: right;
+}
+
+.image_group {
+    float: left;
+    max-height: 100%;
+    border: 1px solid rgb(200, 200, 200);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    cursor: pointer;
+}
+
+.image_view_group {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.image_left_block {
+    height: 80%;
+    width: 20%;
+    float: left;
+}
+
+.image_right_block {
+    height: 100%;
+    width: 80%;
+    float: right;
+}
+
+.image_group_block {
+    max-height: 20%;
+    max-width: 100%;
+}
+
+.main_image_view_block {
+    max-width: 100%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    position: relative;
+}
+
+#shoe_video {
+    margin: auto;
+}
+
+#shoe_video iframe {
+	width: 100%;
+	height: 100%;
+}
+
+#shoe_video img {
+	width: 100%;
+	height: 100%;
+}
+
+#shoe_video .play {
+    height: 72px;
+    width: 72px;
+    position: absolute;
+    background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+    cursor: pointer;
+}
+
+#shoe_description {
+    max-width: 1024px;
+    display: block;
+    width: 80%;
+    padding: 3%;
+    margin: auto;
+    color: #666;
+    text-transform: initial;
+}
+
+.shoe_rating {
+    width: 50vw !important;
+    text-align: left;
+    margin: auto;
+}
+
+@media screen and (max-device-width : 1024px) {
+    .shoe_figure {
+        width: 70vw !important;
+        height: 70vw !important;
+    }
+    #shoe_video {
+        width: 70vw !important;
+        height: 50vw !important;
+    }
+    .shoe_rating {
+        width: 70vw !important;
+    }
+}

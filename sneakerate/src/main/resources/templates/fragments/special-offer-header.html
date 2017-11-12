@@ -1,0 +1,6 @@
+<header id="header" xmlns:th="http://www.thymeleaf.org">
+    <h1 id="page_title" th:text="${title}" />
+    <nav>
+        <a class="nav" th:classappend="${current == 1} ? current" href="/special-offer/all" title="All special offers">All special offers</a>
+    </nav>
+</header>

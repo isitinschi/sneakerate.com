@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" data-th-attr="content=${sneaker.getName()} + ' review'" />
+		<meta name="keywords" data-th-attr="content=${sneaker.getName()} + ',sneakers, review, rating, description, sneakerhead'" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+		<title th:text="${sneaker.getName()} + ' Review'" />
+		<noscript id="deferred-styles">
+			<link rel="stylesheet" type="text/css" href="../../css/main.css" />
+			<link rel="stylesheet" type="text/css" href="../../css/sneaker.css" />
+		</noscript>
+	</head>
+	<body onload="on_load();lazyLoadCss();">
+		<article>
+			<header th:replace="fragments/header :: header(title=${sneaker.getName()})" />
+			<section id="main">
+                <h2 id="shoe_description" th:text="${sneaker.getDescription()}" />
+				<div id="shoes_block">
+						<figure class="shoe_figure">
+							<div class="image_left_block">
+								<div class="image_view_group" th:each="imageGroup,image_group : ${images}" data-th-attr="image_group=${image_group.index}">
+									<img class="image_view" onmouseover="on_focus_image_view(this); on_mouse_in_view(this)" th:each="image,image_view : ${images.get(image_group.index)}" data-th-attr="name=${image}, image_view=${image_view.index}, image_group=${image_group.index}" />
+								</div>
+							</div>
+							<div  class="image_right_block">
+								<div class="main_image_view_block">
+									<div class="amazon">
+										<a id="amazon_link" data-th-attr="href=${sneaker.getAmazonLinks().get(0)}" title="Go to Amazon" target="_blank" rel="nofollow">
+											<noscript>
+												<img data-th-attr="src='https://www.img.sneakerate.com/amazon-logo.png'" alt="Amazon logo" />
+											</noscript>
+											<img hidden="true" id="amazon_logo" alt="Amazon logo" />
+										</a>
+									</div>
+									<noscript>
+										<img class="shoe_image" data-th-attr="src='https://www.img.sneakerate.com/' + ${sneaker.getImage()}, alt=${sneaker.getName()}" />
+									</noscript>
+									<img hidden="true" id="main_image_view" class="shoe_image" data-th-attr="name=${sneaker.getImage()}, title=${sneaker.getName()}, alt=${sneaker.getName()}" />
+								</div>
+								<div class="image_group_block">
+									<img class="image_group" onmouseover="on_change_image_group(this); on_mouse_in_group(this)" th:each="image,itrStat : ${images}" data-th-attr="name=${image.get(0)}, image_group=${itrStat.index}, amazon=${sneaker.getAmazonLinks().get(itrStat.index)}" />
+								</div>
+							</div>
+						</figure>
+
+						<figure id="shoe_video" data-th-attr="video_id=${sneaker.getVideoId()}" />
+
+						<div class="shoe_rating">
+							<p>
+								<b>Release:</b>
+								<span class="right soft_grey_color" th:text="${sneaker.getReleaseYear()}" />
+							</p>
+							<p>
+								<b>Overall:</b>
+								<progress class="right" data-th-attr="value=${sneaker.getOverallRating()}" max="5" th:text="${sneaker.getOverallRating()} + ' / 5'" />
+							</p>
+							<p>
+								<b>Price:</b>
+								<progress class="right" data-th-attr="value=${sneaker.getPriceRating()}" max="5" th:text="${sneaker.getPriceRating()} + ' / 5'" />
+							</p>
+							<p>
+								<b>Design:</b>
+								<progress class="right" data-th-attr="value=${sneaker.getDesignRating()}" max="5" th:text="${sneaker.getDesignRating()} + ' / 5'" />
+							</p>
+							<p>
+								<b>Comfort:</b>
+								<progress class="right" data-th-attr="value=${sneaker.getComfortRating()}" max="5" th:text="${sneaker.getComfortRating()} + ' / 5'" />
+							</p>
+							<p>
+								<b>Durability:</b>
+								<progress class="right" data-th-attr="value=${sneaker.getDurabilityRating()}" max="5" th:text="${sneaker.getDurabilityRating()} + ' / 5'" />
+							</p>
+						</div>
+				</div>
+			</section>
+		</article>
+		<footer th:replace="fragments/footer :: footer" />
+
+		<script type="text/javascript" src="/js/sneaker.js" async="async"/>
+		<script type="text/javascript" async="async">
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-86538624-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+	</body>			
+</html>

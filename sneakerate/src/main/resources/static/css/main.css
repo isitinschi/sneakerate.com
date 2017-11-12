@@ -1,0 +1,183 @@
+html {
+    height: 100%;
+}
+
+body {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	text-align: center;
+	overflow-x: hidden;
+    min-height: 100%;
+    min-width: 300px;
+    position: relative;
+}
+
+article {
+	display:block;
+	height: 100%;
+}
+
+#page_description {
+    max-width: 1024px;
+    display: block;
+    width: 80%;
+	padding: 3%;
+	margin: auto;
+    color: #666;
+    text-transform: initial;
+}
+
+.shoe_figure {
+    max-width: 1024px;
+    display: block;
+    width: 60%;
+	padding: 3%;
+	margin: auto;
+}
+
+#shoes_block {
+    width: 75%;
+    display: inline-block;
+}
+
+.sidebar_figure {
+	margin: auto;
+	padding: 3%;
+	margin: 6%;
+}
+
+.text_align_left {
+	text-align: left;
+}
+
+.text_align_center {
+	text-align: center;
+}
+
+.text_align_right {
+	text-align: right;
+}
+
+#main {
+    width: 100%;
+}
+
+#sidebar {
+	display: none;
+	float: right;
+	text-align: center;
+	max-width: 512px;
+	vertical-align: top;
+	width: 25%;
+}
+
+#page_title {
+	color: white;
+	text-transform: uppercase;
+	height: 50%;
+	font-size: 4vw;
+	text-shadow: 3px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+}
+
+#sidebar_title {
+    text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+nav {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav {
+    text-shadow: 2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1%;
+    margin: 1%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.current {
+    text-decoration: underline;
+}
+
+header {
+	background-image: url('https://www.img.sneakerate.com/blur_shop.jpg');
+	background-size: cover;
+	width: 100%;
+	height: 50vh;
+	cursor: default;
+}
+
+button {
+	width: 30%;
+	margin: 1%;
+}
+
+.star {
+	color:yellow;
+}
+
+.dollar {
+	color:green;
+}
+
+.inline {
+	display: inline;
+}
+
+.shoe_image {
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.soft_grey_color {
+    color: #666;
+}
+
+.amazon {
+    width: 25%;
+    right: 0px;
+    position: absolute;
+}
+
+.amazon img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-device-width : 1024px) {
+    .shoe_figure {
+    	width: 80%;
+    }
+    #page_title {
+    	font-size: 6vw;
+    }
+    button {
+        width: 40%;
+        font-size: 3vw;
+    }
+    small {
+        display: none;
+    }
+}
